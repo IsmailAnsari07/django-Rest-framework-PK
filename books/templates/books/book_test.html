@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h3>All Book Data</h3>
+    {% for book in book_list %} <!-- book_list is used for fetching the data from the model. book_list specific data fetch raha hai model ke hisab se.
+    And hum object_list use karenge to jitne bhi models hai sab ke data fetch kar ke dega. Humare case me abhi ek hi model hai that is book so we are using book_list here.-->
+        <ul>
+        <li>{{ book.title }}</li>
+        <li>{{ book.subtitle }}</li>
+        <li>{{ book.author }}</li>
+        <li>{{ book.isbn }}</li>
+        </ul>
+    {% endfor %}
+</body>
+</html>
